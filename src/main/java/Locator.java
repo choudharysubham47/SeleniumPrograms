@@ -36,3 +36,4 @@ public class Locator {
 //driver.findElement(by.linktext());
 //driver.findElement(by.partialLinkText());
 //driver.findElement(by.cssSelector());
+//driver.findElements(By.tagName("a"));
