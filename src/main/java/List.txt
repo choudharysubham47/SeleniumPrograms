@@ -1,0 +1,151 @@
+Importants Commands in Selenium
+
+1>Locators in Selenium
+2>Waits Command
+3>Navigate Command
+4>Close and quit Command
+5>Sendkeys Command
+6>ScrollDown Command
+7>HoverOver Command
+8>ScreenShot command
+9>getTitle command
+10>Windows Maximize command
+11>Take input using JavaScriptExecutor
+12>Select DropDown
+13>Switch To Commands
+14>FindElement and FindElements command
+15>How to handle Alerts and Popups in Selenium?
+16>How to Scroll Down or Up using Selenium Webdriver?
+17>Exception Handling in Selenium WebDriver?
+18>How to handle iFrames in Selenium
+19>How do you ensure maximum test coverage?
+20>Selenium Commands every Developer or Tester must know?
+21>5 Tests You Must Run Before Launching A Website?
+22>7 Common Cross Browser Compatibility Issues to Avoid?
+25>What is meant by XPath in Selenium. Explain XPath Absolute and XPath Relative.
+26>12. In Xpath, what is the difference between "/" and "//"?
+27>Differentiate between findElement() and findElements() in the context of Selenium with proper examples.
+28>Right Click in Selenium?
+29>Explain different types of framework and connection of Selenium with Robot Framework?
+30>How will you select a date from a datepicker in a webpage using Selenium for automated
+    testing? Explain with a proper code.
+31> What do you understand about broken links? How can you detect broken links in Selenium?
+    Explain properly with code.
+32>What do you understand about Jenkins? Why are the benefits of using it with Selenium?
+33>What do you understand about the Page Object Model in the context of Selenium?
+   What are its advantages?
+34>What do you understand about window handle in the context of automated testing?
+    How can you handle multiple windows in Selenium?
+35>
+
+
+
+Q>How to perform Mouse Hover Action in Selenium
+//Locating the Main Menu (Parent element)
+  WebElement mainMenu = driver.findElement(By.xpath("<Xpath of the Main menu"));
+
+  //Instantiating Actions class
+  Actions actions = new Actions(driver);
+
+  //Hovering on main menu
+  actions.moveToElement(mainMenu);
+
+  // Locating the element from Sub Menu
+  WebElement subMenu = driver.findElement(By.xpath("<Xpath of the sub element>"));
+
+  //To mouseover on sub menu
+  actions.moveToElement(subMenu);
+
+  //build()- used to compile all the actions into a single step
+  actions.click().build().perform();
+
+Q>>Selenium Commands every Developer or Tester must know??
+
+     Table of Contents
+        Navigational Selenium Commands
+        Selenium Commands to search for specific Web Elements
+        Commands to handle frames in Selenium Webdriver
+        Basic Get commands used in the browser
+        Wait commands in Selenium
+
+Navigational Selenium Commands
+        driver.get (“https://www.browserstack.com”) ;
+        driver.navigate().forward();
+        driver.navigate().back();
+        driver.navigate().refresh();
+
+Selenium Commands to search for specific Web Elements
+        WebDriver driver = driver.findElement (By.id(“text-box”));
+        By.Id()
+        By.name()
+        By.link()
+        By.tagName()
+        By.xpath()
+        By.cssSeletor()
+
+Commands to handle frames in Selenium Webdriver
+      By Index
+        driver.switchTo().frame(1);
+
+      By Id
+        driver.switchTo().frame(“resultframe”);
+
+      By Web Element
+        WebElement iframeElement = driver.findElement(By.id("resultframe"));
+        driver.switchTo().frame(iframeElement);
+
+
+Basic Get commands used in the browser
+            getCurrentUrl()
+            getPageSource()
+            getTitle()
+
+Wait commands in Selenium
+        Implicit wait commands
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Explicit wait commands:
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'COMPOSE')]"));
+
+
+Difference between Implicit and Explicit Wait Commands in Selenium
+>Implicit Wait	                                                        >Explicit Wait
+>Applies to all elements in a test script. 	                            >Applies only to specific elements as intended by the user.
+>No need to specify “ExpectedConditions” on the element to be located	>Must always specify “ExpectedConditions” on the element to be located
+
+@@@ 5 Common Bugs Faced in UI Testing @@@
+Most Common Bugs in Web Applications
+1>Cross Browser Adaptability Bugs
+2>Form Validation Bugs
+3>Usability Bugs
+4>Inconsistencies in the Page Layout across Devices
+5>Broken UI Elements leading to Misbehaviour
+6>UI Testing Checklist
+
+Cross Browser Adaptability Bugs
+    If a web app is not tested for cross-browser compatibility,
+    it may lead to a bad user experience and eventually result in revenue loss.
+    Hence, QAs must perform browser compatibility testing for their web applications
+    using test automation frameworks like Selenium. This helps ensure that their web
+    apps are easily accessible by users across multiple browsers. It also provides
+    users who might be using older browser versions can use a web app with no issues.
+
+Form Validation Bugs
+        These bugs are often overlooked as they are considered a low priority. In this case,
+        a form might misbehave or throw errors if invalid characters are entered in the
+        validation fields. Surpassing the maximum length of an input field also leads to errors.
+
+Usability Bugs
+        If the developed web application is not user-friendly, it might be annoying for end-users.
+        If users are not able to easily access the critical functionalities of the application,
+        it translates to a bad user experience. All key functionalities or features must be available
+        upfront on the home page or main menu.
+
+        Easy navigation helps users understand all key features of the application and also enhances
+        the user experience. Developers should design in a way that facilitates an easy understanding
+        of the app architecture for the user. You can do this by providing quick tutorials when a user
+        explores the app for the first time or by providing a Help section.
+
+Inconsistencies in the Page Layout across Devices
+Broken UI Elements leading to Misbehaviour
+
