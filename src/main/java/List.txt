@@ -17,7 +17,6 @@ Importants Commands in Selenium
 15>How to handle Alerts and Popups in Selenium?
 16>How to Scroll Down or Up using Selenium Webdriver?
 17>Exception Handling in Selenium WebDriver?
-
 18>How to handle iFrames in Selenium
 19>How do you ensure maximum test coverage?
 20>Selenium Commands every Developer or Tester must know?
@@ -37,7 +36,10 @@ Importants Commands in Selenium
    What are its advantages?
 34>What do you understand about window handle in the context of automated testing?
     How can you handle multiple windows in Selenium?
-35>
+
+https://www.interviewbit.com/selenium-interview-questions/#what-are-the-selenium-suite-components
+
+
 
 
 
